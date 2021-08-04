@@ -1,0 +1,94 @@
+### USER REQUEST
+GET http://localhost:3000/api/protected 
+content-type: application/json
+Authorization: 
+
+###
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+    "username":"coba1",
+    "name":"coba",
+    "password":"Coba123456",
+    "role":"student"
+}
+
+###
+POST http://localhost:3000/api/login 
+content-type: application/json
+Accept: application/json
+
+{
+    "username":"nurhuda",
+    "password":"Nurhuda123"
+}
+
+###
+POST http://localhost:3000/api/refresh-token
+content-type: application/json
+Accept: application/json
+
+{
+    "refresh":""
+}
+
+###
+GET http://localhost:3000/api/user
+Authorization: 
+
+###
+PUT http://localhost:3000/api/user
+Authorization:
+content-type: application/json
+Accept: application/json
+
+{
+    "username":"admin",
+    "name":"Admin"
+}
+###
+DELETE http://localhost:3000/api/user
+content-type: application/json
+Accept: application/json
+Authorization: 
+
+{
+    "password":"Coba123456"
+}
+
+### LESSON REQUEST
+GET http://localhost:3000/api/lesson
+Authorization: 
+
+####
+GET http://localhost:3000/api/lesson/
+
+###
+POST http://localhost:3000/api/lesson
+content-type: application/json
+Accept: application/json
+Authorization: 
+
+{
+    "title":",./",
+    "slug":"slug2",
+    "content":"blabla"
+}
+
+### Admin
+GET http://localhost:3000/api/admin/protected
+content-type: application/json
+Accept: application/json
+Authorization: 
+
+### ADMIN USER
+GET http://localhost:3000/api/admin/user?page=
+Authorization: 
+
+###
+GET http://localhost:3000/api/admin/user/nurhuda
+Authorization: 
+
+### 404
+GET http://localhost:3000/
