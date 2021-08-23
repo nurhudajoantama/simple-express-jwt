@@ -1,1 +1,1 @@
-learning javascript, node js, express authentication with jwt
+simple javascript node js authentication with JWT
